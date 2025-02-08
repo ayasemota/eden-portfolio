@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    @apply transition-all duration-300;
+  }
+}
+
 @font-face {
   font-family: "Neue Machina";
   src: url("../fonts/NeueMachina-Light.otf") format("opentype");

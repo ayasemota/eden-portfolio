@@ -10,6 +10,13 @@ export default {
     extend: {
       colors: {
         brown: "#444",
+        blue: "#00F",
+      },
+      boxShadow: {
+        one: '0px 4px 50px 0px rgba(0, 0, 0, 0.10)',
+      },
+      backgroundImage: {
+        one: 'linear-gradient(90deg, #00F 0%, #90F 100%)',
       },
       fontFamily: {
         neue: ["Neue Machina", "sans-serif"],
