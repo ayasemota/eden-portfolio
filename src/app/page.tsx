@@ -9,18 +9,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 const socialLinks = [
-  { href: "/", src: "/linkedin.svg", alt: "LinkedIn" },
-  { href: "/", src: "/instagram.svg", alt: "Instagram" },
-  { href: "/", src: "/behance.svg", alt: "Behance" },
-  { href: "/", src: "/unk_social.svg", alt: "Unknown Social Media" },
-  { href: "/", src: "/x.svg", alt: "X" },
+  { href: "/", src: "socials/linkedin.svg", alt: "LinkedIn" },
+  { href: "/", src: "socials/instagram.svg", alt: "Instagram" },
+  { href: "/", src: "socials/behance.svg", alt: "Behance" },
+  { href: "/", src: "socials/unk_social.svg", alt: "Unknown Social Media" },
+  { href: "/", src: "socials/x.svg", alt: "X" },
 ];
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="grid max-w-full justify-center">
+      <main className="grid max-w-full justify-center overflow-x-hidden">
         {/* <Banner /> */}
 
         <section className="flex flex-wrap md:flex-nowrap gap-10 grid-cols-2 max-w-[1200px] px-10 py-8">
