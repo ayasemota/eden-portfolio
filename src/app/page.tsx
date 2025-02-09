@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ImageBox from "@/components/ImageBox";
 import Navbar from "@/components/Navbar";
 import Product from "@/components/Product";
+import Review from "@/components/Review";
 import Thoughts from "@/components/Thoughts";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,10 +31,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="grid max-w-full justify-center overflow-x-hidden">
-        {/* <Banner /> */}
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 max-w-[1200px] px-10 py-8">
+      <section className="grid justify-center items-center">
+        <div className="w-[1200px] max-w-[90vw] px-10 py-8 grid gap-8 grid-cols-1 lg:grid-cols-2">
           <div>
             <Image
               src="/eden.png"
@@ -58,20 +58,22 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <Thoughts
-          text={`"Design is problem solving" Solving digital problems with usability focused interfaces`}
-        />
+      <Thoughts
+        text={`"Design is problem solving" Solving digital problems with usability focused interfaces`}
+      />
 
-        <section className="relative flex flex-col gap-10 px-10 py-8">
+      <section className="grid justify-center items-center relative">
+        <div className="w-[1300px] max-w-[90vw] grid gap-10 px-4 py-8">
           <div>
             <h1 className="text-xl">Projects</h1>
           </div>
-          <div className="p-4 max-w-full">
+          <div className="py-4">
             <ImageBox />
-            <div className="absolute hidden lg:block -top-10 left-[60%] w-[200px]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="552" height="597" viewBox="0 0 552 597" fill="none">
+            <div className="absolute hidden lg:block -top-8 left-[50%]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 552 597" fill="none">
                 <path d="M53.2653 56.7227C224.525 -3.18335 121.507 352.156 59.9924 531.795C52.8358 552.694 45.84 550.951 55.3509 531.013C136.992 359.863 359.692 78.6837 502 56.7227" stroke="url(#paint0_linear_13_400)" strokeWidth="100" strokeLinecap="round" />
                 <defs>
                   <linearGradient id="paint0_linear_13_400" x1="-126.57" y1="631" x2="537.85" y2="631" gradientUnits="userSpaceOnUse">
@@ -85,79 +87,80 @@ export default function Home() {
             </div>
           </div>
           <h1>Something is here</h1>
-        </section>
+        </div>
+      </section>
 
-        <section className="flex flex-wrap md:flex-nowrap gap-10 max-w-[1400px] px-10 py-12">
-          <div className="flex justify-center gap-10 flex-wrap">
-            {productList.map((props) => (
-              <Product
-                key={undefined}
-                src={props.src}
-                text={props.text}
-              />
-            ))}
+      <section className="grid justify-center items-center">
+        <div className="w-[1200px] max-w-[100vw] flex flex-wrap justify-center gap-10 px-10 py-12">
+          {productList.map((props) => (
+            <Product
+              key={undefined}
+              src={props.src}
+              text={props.text}
+            />
+          ))}
+        </div>
+      </section>
+
+      <Thoughts
+        text={`"Your ideas, brought to life—creating digital experiences that inspire and empower. Designing your ideas into seamless, user-centered digital experiences that inspire action and trust."`}
+      />
+
+      <section className="grid justify-center items-center">
+        <div className="grid gap-10 py-8 justify-center">
+          <div className="grid justify-center gap-4 px-6">
+            <h1 className="text-xl text-center">Client Review</h1>
+            <p className="text-md w-fit md:w-[600px] text-center">Our works are a blend of innovative thinking and practical solutions, ensuring they are both unique and effective.</p>
           </div>
-        </section>
-
-        <Thoughts
-          text={`"Your ideas, brought to life—creating digital experiences that inspire and empower. Designing your ideas into seamless, user-centered digital experiences that inspire action and trust."`}
-        />
-
-        <section className="relative flex flex-col gap-10 grid-cols-2 px-10 py-8">
           <div>
-            <h1 className="text-xl">Client Review</h1>
-            <p className="text-md max-w-[610px]">Our works are a blend of innovative thinking and practical solutions, ensuring they are both unique and effective.</p>
+            <Review />
           </div>
-          <div className="py-16 font-tight text-brown flex justify-center">
-            <article className="p-8 bg-white shadow-one grid gap-10 w-[400px] max-w-full rounded-[40px]">
-              <div className="flex items-center justify-between">
-                <div className="flex gap-4 items-center">
-                  <Image
-                    src="/teddy.png"
-                    alt="Teddy Eragbai"
-                    height={52}
-                    width={52}
-                    className="rounded-full"
-                  />
-                  <p className="text-md">Teddy Eragbai</p>
-                </div>
-                <Link href="/">
-                  <Image
-                    src="/socials/linkedin.svg"
-                    alt="Teddy Eragbai"
-                    height={28}
-                    width={28}
-                  />
-                </Link>
+        </div>
+      </section>
+
+      {/* <section className="grid justify-center items-center">
+        <div className="grid gap-10 py-8 justify-center">
+          <div className="grid justify-center gap-4 px-6">
+            <h1 className="text-xl text-center">Pricing Options</h1>
+            <p className="text-md w-fit md:w-[600px] text-center">Get your project done with affordable prices that you can trust.</p>
+          </div>
+          <div>
+            <article>
+              <div>
+                <h2>Design Only</h2>
+                <p>For clients who already have a development team</p>
               </div>
               <div>
-                <p className="text-md">Confidence is a great product designer. Working with him on different projects has been totally worth it. I recommend him anytime.</p>
+                <p>Starting at</p>
+                <h1>$300</h1>
               </div>
             </article>
           </div>
-        </section>
+        </div>
+      </section> */}
 
-        <section className="max-w-[100vw] p-6 grid justify-center">
-          <div className="flex justify-center gap-[100px] w-fit bg-one px-8 md:px-20 py-[100px] my-[100px] rounded-[30px]">
-            <div className="grid gap-6 text-white">
-              <p className="text-md">Stay up to date</p>
-              <h2 className="text-[50px]">Eden Newsletter</h2>
-              <div className="bg-white inline-flex flex-wrap lg:flex-nowrap lg:no-wrap p-[10px] rounded-lg lg:rounded-full">
-                <input type="email" placeholder="Enter your email" className="w-[450px] max-w-[50vw] p-4 focus:outline-none focus:text-black focus:text-md placeholder:text-md rounded-full" />
-                <button className="bg-blue px-10 py-4 text-md rounded-full">Subscribe</button>
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <Image
-                src="/rb_18.png"
-                alt="Envelope"
-                height={227}
-                width={213}
-              />
+      <section className="grid justify-center items-center">
+        <div className="flex flex-wrap justify-center gap-[100px] w-fit bg-one px-6 my-10 py-12 max-w-[90vw] rounded-[30px]">
+          <div className="grid gap-6 text-white">
+            <p className="text-md">Stay up to date</p>
+            <h2 className="text-[50px]">Eden Newsletter</h2>
+            <div className="bg-white inline-flex flex-wrap lg:flex-nowrap lg:no-wrap p-[10px] rounded-lg lg:rounded-full gap-4">
+              <input type="email" placeholder="Enter your email" className="w-[450px] max-w-[50vw] p-4 focus:outline-none focus:text-black focus:text-md placeholder:text-md rounded-full" />
+              <button className="bg-blue px-10 py-4 text-md rounded-lg lg:rounded-full">Subscribe</button>
             </div>
           </div>
-        </section>
-      </main>
+          <div className="hidden lg:block">
+            <Image
+              src="/rb_18.png"
+              alt="Envelope"
+              height={227}
+              width={213}
+              className="mix-blend-luminosity"
+            />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
