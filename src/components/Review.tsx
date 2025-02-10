@@ -54,7 +54,8 @@ export default function Review() {
         slidesPerView: 2,
        },
       }}
-      className="w-[90vw] max-w-[1200px]"
+      className="w-[90vw] max-w-[1200px] cursor-grab"
+      title="Grab to move"
      >
       {reviews.map((props, index) => (
        <SwiperSlide key={index} className="flex justify-center items-center">
@@ -64,10 +65,11 @@ export default function Review() {
      </Swiper>
     </div>
    </div>
-   <div className="flex justify-center gap-4 mt-4">
+
+   {/* <div className="flex justify-center gap-4 mt-4">
     <button className="prev-btn px-4 py-2 bg-gray-200 rounded">←</button>
     <button className="next-btn px-4 py-2 bg-gray-200 rounded">→</button>
-   </div>
+   </div> */}
   </>
  );
 }

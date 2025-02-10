@@ -10,10 +10,10 @@ const reviews = [
  {
   name: "AY Asemota",
   img: {
-   src: "/teddy.png",
+   src: "/ay.jpg",
    alt: "AY Asemota",
   },
-  message: "Confidence is a great product designer. Working with him on different projects has been totally worth it. I recommend him anytime.",
+  message: "Cheers to Confidence for his amazing works. I'm rooting for you always!",
  },
  {
   name: "Teddy Eragbai",
@@ -26,10 +26,10 @@ const reviews = [
  {
   name: "AY Asemota",
   img: {
-   src: "/teddy.png",
+   src: "/ay.jpg",
    alt: "AY Asemota",
   },
-  message: "Confidence is a great product designer. Working with him on different projects has been totally worth it. I recommend him anytime.",
+  message: "Cheers to Confidence for his amazing works. I'm rooting for you always!",
  },
 ];
 

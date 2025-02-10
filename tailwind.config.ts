@@ -33,15 +33,6 @@ export default {
         lg: "24px",
         xl: "40px",
       },
-      animation: {
-        gradientMove: "gradientMove 5s infinite linear alternate",
-      },
-      keyframes: {
-        gradientMove: {
-          "0%": { transform: "translateX(-50%)" },
-          "100%": { transform: "translateX(50%)" },
-        },
-      },
     },
   },
   plugins: [],
