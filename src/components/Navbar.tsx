@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-center sticky top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9999]">
+      <nav className="flex items-center justify-center sticky top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9998]">
         <div className="flex justify-between w-full max-w-[1200px] px-8 py-6">
           <Link href="/">
             <Image src="logo.svg" alt="logo" height={30} width={30} priority />

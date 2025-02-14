@@ -141,9 +141,9 @@ export default function Home() {
          </section> */}
         <section className="grid justify-center items-center">
           <div className="w-[1400px] max-w-[100vw] flex flex-wrap justify-center gap-10 px-10 py-12">
-            {productList.map((props) => (
+            {productList.map((props, index) => (
               <Product
-                key={undefined}
+                key={index}
                 src={props.src}
                 text={props.text}
               />

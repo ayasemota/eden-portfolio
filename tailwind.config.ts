@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+       animation: {
+        spin: 'spin 3s linear infinite', 
+      },
       colors: {
         brown: "#444",
         blue: "#00F",
