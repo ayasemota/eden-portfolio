@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState<Date | null>(null);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
+    setTime(new Date());
     const interval = setInterval(() => {
       setTime(new Date());
     }, 1000);
@@ -18,66 +19,47 @@ export default function Navbar() {
     return value < 10 ? `0${value}` : value.toString();
   };
 
-  const hours = formatTime(time.getHours());
-  const minutes = formatTime(time.getMinutes());
-  const seconds = formatTime(time.getSeconds());
-
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
   return (
     <>
-      <nav className="flex items-center justify-center fixed top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9999]">
+      <nav className="flex items-center justify-center sticky top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9999]">
         <div className="flex justify-between w-full max-w-[1200px] px-8 py-6">
           <Link href="/">
             <Image src="logo.svg" alt="logo" height={30} width={30} priority />
           </Link>
-          <div className="hidden md:flex">
-            <span>{hours}</span>
-            <span>:</span>
-            <span>{minutes}</span>
-            <span>:</span>
-            <span>{seconds}</span>
+          <div className="hidden cursor-pointer md:flex" title="Hang tight, we're trying to find your location">
+            {time ? (
+              <>
+                <span>{formatTime(time.getHours())}</span>
+                <span>:</span>
+                <span>{formatTime(time.getMinutes())}</span>
+                <span>:</span>
+                <span>{formatTime(time.getSeconds())}</span>
+              </>
+            ) : (
+              <span>Loading...</span>
+            )}
             <span>{"⚡Can't Find Location"}</span>
           </div>
           <button onClick={toggleNav}>
             {isNavOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M7.08936 3.5L19.0894 15.5M4 18.4106L17.5 4.91064" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-              >
-                <path
-                  d="M10 6.41064H20M4 12.4106H20H7M4 18.4106H14"
-                  stroke="black"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M10 6.41064H20M4 12.4106H20H7M4 18.4106H14" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             )}
           </button>
         </div>
       </nav>
-
+      
       <div
         className={`fixed inset-0 bg-white bg-opacity-95 backdrop-blur-[50px] z-[9998] transition-opacity duration-300 ${isNavOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
@@ -91,15 +73,15 @@ export default function Navbar() {
                 onClick={toggleNav}
               >
                 Home
-                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
               </Link>
               <Link
-                href="/"
+                href="/About"
                 className="text-[40px] relative inline-block hover:text-gray-600 group"
                 onClick={toggleNav}
               >
                 About me
-                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/"
@@ -107,7 +89,7 @@ export default function Navbar() {
                 onClick={toggleNav}
               >
                 Projects
-                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/"
@@ -115,15 +97,15 @@ export default function Navbar() {
                 onClick={toggleNav}
               >
                 Eden Gallery
-                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/"
                 className="text-[40px] relative inline-block hover:text-gray-600 group"
                 onClick={toggleNav}
               >
-                Book a call
-                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
+                Book a Call
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </div>
           </div>

@@ -48,7 +48,7 @@ export default function Review() {
       modules={[Navigation, Autoplay]}
       spaceBetween={20}
       slidesPerView={1}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
       breakpoints={{
        1000: {
         slidesPerView: 2,
