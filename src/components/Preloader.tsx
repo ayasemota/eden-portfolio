@@ -26,7 +26,7 @@ const Preloader = () => {
  if (!isVisible) return null;
 
  return (
-  <div className={`fixed inset-0 flex items-center justify-center bg-white z-[9999] transition-opacity duration-500 ${isLoading ? "opacity-100" : "opacity-0"}`}>
+  <div className={`fixed inset-0 flex items-center justify-center bg-white transition-opacity duration-500 ${isLoading ? "opacity-100 z-[9999]" : "opacity-0 z-0"}`}>
    <div className="animate-spin">
     <Image src="logo.svg" alt="logo" height={50} width={50} priority />
    </div>

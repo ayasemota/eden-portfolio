@@ -9,7 +9,7 @@ export default function Product(props: Products) {
   <div>
     <article
      key={props.index}
-     className="hover:scale-[1.1] flex items-end justify-center w-[390px] h-[500px] rounded-xl bg-cover bg-no-repeat px-8 py-4"
+     className="hover:scale-[1.1] flex items-end justify-center w-[340px] h-[460px] rounded-xl bg-cover bg-black bg-opacity-90 bg-no-repeat px-8 py-4"
      style={{
       backgroundImage: `url('${props.src}')`
      }}

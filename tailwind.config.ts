@@ -10,6 +10,7 @@ export default {
     extend: {
        animation: {
         spin: 'spin 3s linear infinite', 
+        slowSpin: 'spin 15s linear infinite', 
       },
       colors: {
         brown: "#444",

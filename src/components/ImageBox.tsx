@@ -11,18 +11,8 @@ export default function ImageBox() {
   e.preventDefault();
   e.stopPropagation();
 
-  const rect = e.currentTarget.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
   const newScale = e.deltaY < 0 ? scale * 1.1 : scale * 0.9;
   const clampedScale = Math.max(0.5, Math.min(5, newScale));
-
-  const scaleFactor = clampedScale / scale;
-  setPosition({
-   x: mouseX - (mouseX - position.x) * scaleFactor,
-   y: mouseY - (mouseY - position.y) * scaleFactor,
-  });
 
   setScale(clampedScale);
  };

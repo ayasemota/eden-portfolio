@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <title>Eden Portfolio</title>
     <meta name="description" content="Created With Love - Design by Eden" />
    </Head>
-   <Preloader />
+   {/* <Preloader /> */}
    <Component {...pageProps} />
   </>
  );
