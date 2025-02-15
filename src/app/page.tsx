@@ -40,7 +40,7 @@ export default function Home() {
         <Navbar />
 
         <section
-          className="relative h-[100%] min-h-[100vh] overflow-clip flex items-center justify-center bg-cover bg-no-repeat bg-center"
+          className="relative h-[92dvh] min-h-[92dvh] overflow-clip flex items-center justify-center bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: "url('/perspective_grid.png')" }}
         >
           <div className="absolute w-full max-w-[1200px] flex gap-16 px-8 py-4">
