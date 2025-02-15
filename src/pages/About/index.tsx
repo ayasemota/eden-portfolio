@@ -20,7 +20,7 @@ export default function About() {
        <div className="h-[300px] w-[300px] lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px] border-solid border-[10px] border-[#DCC0F1] max-w-[90vw] max-h-[100%] rounded-full overflow-hidden">
         <div className="filter grayscale">
          <Image
-          src="/product_6.jpg"
+          src="/confidence_18th_birthday_2.jpg"
           alt="Eden Creates"
           width={500}
           height={500}

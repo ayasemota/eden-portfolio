@@ -28,7 +28,7 @@ export default function Gallery() {
      </div>
      <div className="mt-[140px] grid justify-center items-center gap-6 px-6">
       <h1 className="text-xl text-center">Other Projects</h1>
-      <div className="w-[1200px] max-w-[100vw] flex flex-wrap justify-center gap-10 px-10">
+      <div className="w-[1200px] max-w-[90vw] flex flex-wrap justify-center gap-10 px-10">
        {projects.map((props, index) => (
         <Card
          key={index}

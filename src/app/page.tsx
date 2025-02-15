@@ -39,7 +39,7 @@ export default function Home() {
 
       <main>
 
-        <div className="z-[9999]">
+        <div className="sticky top-0 z-[9999]">
           <Navbar />
         </div>
 
