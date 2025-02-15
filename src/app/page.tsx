@@ -33,11 +33,15 @@ const productList = [
 export default function Home() {
   return (
     <>
-      <Preloader />
+      <div className="z-[9998]">
+        <Preloader />
+      </div>
 
       <main>
 
-        <Navbar />
+        <div className="z-[9999]">
+          <Navbar />
+        </div>
 
         <section
           className="relative h-[92dvh] min-h-[92dvh] overflow-clip flex items-center justify-center bg-cover bg-no-repeat bg-center"
@@ -69,8 +73,8 @@ export default function Home() {
           <div className="absolute top-[20%] md:top-[40%] left-[65%]">
             <div className="rounded-full h-[90px] w-[90px] overflow-hidden grid justify-center items-center">
               <Image
-                src="/product_3.jpg"
-                alt="Eden"
+                src="/confidence_at_devfest.jpg"
+                alt="Confidence at Dev Fest"
                 height={115}
                 width={115}
               />
