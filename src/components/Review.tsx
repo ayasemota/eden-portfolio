@@ -15,6 +15,7 @@ type ArticleProps = {
   alt: string;
  };
  name: string;
+ linkedin?: string;
  message: string;
 };
 
@@ -27,9 +28,9 @@ function Article(props: ArticleProps) {
       <Image src={props.img.src} alt={props.img.alt} height={52} width={52} className="rounded-full" />
       <p className="text-md">{props.name}</p>
      </div>
-     <Link href="/" className="hidden sm:block">
+     {props.linkedin ? <Link href={props.linkedin} className="hidden sm:block" title="View Linkedin Profile">
       <Image src="/socials/linkedin.svg" alt="LinkedIn logo" height={28} width={28} />
-     </Link>
+     </Link> : null}
     </div>
     <div>
      <p className="text-md">{props.message}</p>
@@ -42,7 +43,7 @@ function Article(props: ArticleProps) {
 export default function Review() {
  return (
   <>
-   <div className="font-tight text-brown grid items-center justify-center">
+   <div className="font-tight text-brown grid items-center justify-center z-10">
     <div className="py-6">
      <Swiper
       modules={[Navigation, Autoplay]}
@@ -59,7 +60,7 @@ export default function Review() {
      >
       {reviews.map((props, index) => (
        <SwiperSlide key={index} className="flex justify-center items-center">
-        <Article img={props.img} name={props.name} message={props.message} />
+        <Article img={props.img} name={props.name} message={props.message} linkedin={props.linkedin} />
        </SwiperSlide>
       ))}
      </Swiper>

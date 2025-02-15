@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-center sticky top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9998]">
+      <nav className="flex items-center justify-center sticky top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9999]">
         <div className="flex justify-between w-full max-w-[1200px] px-8 py-6">
           <Link href="/">
             <Image src="logo.svg" alt="logo" height={30} width={30} priority />
@@ -100,7 +100,8 @@ export default function Navbar() {
                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
               </Link>
               <Link
-                href="/"
+                href="https://wa.me/+2348121538791/"
+                target="_blank"
                 className="text-[40px] relative inline-block hover:text-gray-600 group"
                 onClick={toggleNav}
               >

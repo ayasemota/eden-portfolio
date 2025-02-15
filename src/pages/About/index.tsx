@@ -38,11 +38,11 @@ export default function About() {
         <p>I am Confidence Nkereuwem, a passionate UX designer committed to fostering growth and knowledge. I collaborate with a talented team of designers and developers to create usable and impactful digital products. With a strong focus on user-centric design, I aim to bridge the gap between innovation and usability, delivering solutions that enhance user experiences and drive results.</p>
        </div>
        <div className="flex flex-wrap gap-6">
-        <Link href="/">
-         <ButtonOne />
+        <Link href="https://x.com/Confidence_Udou" target="_blank">
+         <ButtonOne text="Join Community" />
         </Link>
-        <Link href="/">
-         <ButtonTwo />
+        <Link href="https://wa.me/+2348121538791/" target="_blank">
+         <ButtonTwo text="Book a Call" />
         </Link>
        </div>
       </div>

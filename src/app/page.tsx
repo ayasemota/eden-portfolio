@@ -3,7 +3,6 @@ import ButtonOne from "@/components/ButtonOne";
 import ButtonTwo from "@/components/ButtonTwo";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
-// import ImageBox from "@/components/ImageBox";
 import Navbar from "@/components/Navbar";
 import Preloader from "@/components/Preloader";
 import Pricing from "@/components/Pricing";
@@ -12,14 +11,7 @@ import Review from "@/components/Review";
 import Thoughts from "@/components/Thoughts";
 import Image from "next/image";
 import Link from "next/link";
-
-const socialLinks = [
-  { href: "/", src: "socials/linkedin.svg", alt: "LinkedIn" },
-  { href: "/", src: "socials/instagram.svg", alt: "Instagram" },
-  { href: "/", src: "socials/behance.svg", alt: "Behance" },
-  { href: "/", src: "socials/unk_social.svg", alt: "Unknown Social Media" },
-  { href: "/", src: "socials/x.svg", alt: "X" },
-];
+import socials from "../../data/socials";
 
 const productList = [
   { href: "/", src: "/confidence_at_sui.jpg", alt: "Confidence at Sui on campus blockchain conference", text: "Confidence at Sui on campus blockchain conference" },
@@ -33,13 +25,13 @@ const productList = [
 export default function Home() {
   return (
     <>
-      <div className="z-[9998]">
+      <div className="z-[9999]">
         <Preloader />
       </div>
 
       <main>
 
-        <div className="sticky top-0 z-[9999]">
+        <div className="sticky top-0 z-[9998]">
           <Navbar />
         </div>
 
@@ -48,9 +40,9 @@ export default function Home() {
           style={{ backgroundImage: "url('/perspective_grid.png')" }}
         >
           <div className="absolute w-full max-w-[1200px] flex gap-16 px-8 py-4">
-            <div className="hidden lg:flex flex-col gap-12">
-              {socialLinks.map((props, index) => (
-                <Link href={props.href} key={index}>
+            <div className="hidden lg:flex flex-col z-30 gap-12">
+              {socials.map((props, index) => (
+                <Link href={props.href} key={index} target="_blank">
                   <Image src={props.src} alt={props.alt} height={45} width={45} />
                 </Link>
               ))}
@@ -61,11 +53,11 @@ export default function Home() {
                 <h1 className="text-[60px] md:text-[150px]">Creative Portfolio</h1>
               </div>
               <div className="flex flex-wrap gap-6 z-10">
-                <Link href="/">
-                  <ButtonOne />
+                <Link href="https://x.com/Confidence_Udou" target="_blank">
+                  <ButtonOne text="Join Community"/>
                 </Link>
-                <Link href="/">
-                  <ButtonTwo />
+                <Link href="https://wa.me/+2348121538791/" target="_blank">
+                  <ButtonTwo text="Book a Call" />
                 </Link>
               </div>
             </div>
@@ -84,9 +76,6 @@ export default function Home() {
                 text="Eden Creates"
               />
             </div>
-            {/* <div className="hidden md:grid w-[50%] overflow-hidden">
-              <Review />
-            </div> */}
           </div>
           <div className="absolute top-[50%] md:left-96 z-0">
             <Image
@@ -115,8 +104,8 @@ export default function Home() {
               />
               <p className="pt-4">I am Confidence Nkereuwem, a passionate UX designer committed to fostering growth and knowledge. I collaborate with a talented team of designers and developers to create usable and impactful digital products. With a strong focus on user-centric design, I aim to bridge the gap between innovation and usability, delivering solutions that enhance user experiences and drive results.</p>
               <div className="hidden lg:flex gap-14">
-                {socialLinks.map((props, index) => (
-                  <Link href={props.href} key={index}>
+                {socials.map((props, index) => (
+                  <Link href={props.href} key={index} target="_blank">
                     <Image
                       src={props.src}
                       alt={props.alt}

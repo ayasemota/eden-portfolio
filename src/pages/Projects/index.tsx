@@ -2,14 +2,7 @@ import Footer from "@/components/Footer";
 import ImageBox from "@/components/ImageBox";
 import Navbar from "@/components/Navbar";
 import Card from "@/components/Card";
-
-const projects = [
- { href: "/", src: "/myne_estate.jpg", alt: "Myne Estate", text: "Myne Estate" },
- { href: "/", src: "/enola_landing_page.jpg", alt: "Enola Landing Page", text: "Enola Landing Page" },
- { href: "/", src: "/confidence_hosting_eden.jpg", alt: "Confidence hosting eden creative community product design class", text: "Confidence hosting eden creative community product design class" },
- { href: "/", src: "/confidence_18th_birthday.jpg", alt: "Confidence 18th birthday", text: "Confidence 18th birthday" },
- { href: "/", src: "/confidence_18th_birthday_2.jpg", alt: "Confidence 18th birthday", text: "Confidence 18th birthday" },
-];
+import projects from "../../../data/projects";
 
 export default function Project() {
  return (
