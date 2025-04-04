@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-center sticky top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9999]">
+      <nav className="flex items-center justify-center sticky top-0 w-full bg-white bg-opacity-60 backdrop-blur-xl z-[9999] font-neue">
         <div className="flex justify-between w-full max-w-[1200px] px-8 py-6">
           <Link href="/">
             <Image src="logo.svg" alt="logo" height={30} width={30} priority />
@@ -61,8 +61,7 @@ export default function Navbar() {
       </nav>
       
       <div
-        className={`fixed inset-0 bg-white bg-opacity-95 backdrop-blur-[50px] z-[9998] transition-opacity duration-300 ${isNavOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+        className={`fixed inset-0 font-neue bg-white bg-opacity-95 backdrop-blur-[50px] z-[9998] transition-opacity duration-300 ${isNavOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         <div className="flex flex-col h-full">
           <div className="flex flex-col items-center justify-center h-full space-y-8">
